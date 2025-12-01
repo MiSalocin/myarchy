@@ -4,15 +4,15 @@
 set -eEo pipefail
 
 # Define Omarchy locations
-export OMARCHY_PATH="$HOME/.local/share/omarchy"
-export OMARCHY_INSTALL="$OMARCHY_PATH/install"
-export OMARCHY_INSTALL_LOG_FILE="/var/log/omarchy-install.log"
-export PATH="$OMARCHY_PATH/bin:$PATH"
+export MYARCHY_PATH="$HOME/.local/share/myarchy"
+export MYARCHY_INSTALL="$MYARCHY_PATH/install"
+export MYARCHY_INSTALL_LOG_FILE="/var/log/myarchy-install.log"
+export PATH="$MYARCHY_PATH/bin:$PATH"
 
 # Install
-source "$OMARCHY_INSTALL/helpers/all.sh"
-source "$OMARCHY_INSTALL/preflight/all.sh"
-source "$OMARCHY_INSTALL/packaging/all.sh"
-source "$OMARCHY_INSTALL/config/all.sh"
-source "$OMARCHY_INSTALL/login/all.sh"
-source "$OMARCHY_INSTALL/post-install/all.sh"
+source "$MYARCHY_INSTALL/helpers/all.sh"
+source "$MYARCHY_INSTALL/preflight/all.sh"
+source "$MYARCHY_INSTALL/packaging/all.sh"
+source "$MYARCHY_INSTALL/config/all.sh"
+source "$MYARCHY_INSTALL/login/all.sh"
+source "$MYARCHY_INSTALL/post-install/all.sh"

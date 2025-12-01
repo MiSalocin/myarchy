@@ -1,8 +1,6 @@
 # Omarchy core package list installed via install/packaging/base.sh
 # This file is also used by the ISO builder when determining needs
 
-1password-beta
-1password-cli
 aether
 asdcontrol
 avahi
@@ -20,6 +18,19 @@ docker
 docker-buildx
 docker-compose
 dust
+elephant
+elephant-bluetooth
+elephant-calc
+elephant-clipboard
+elephant-desktopapplications
+elephant-files
+elephant-menus
+elephant-providerlist
+elephant-runner
+elephant-symbols
+elephant-todo
+elephant-unicode
+elephant-websearch
 evince
 exfatprogs
 expac
@@ -56,7 +67,6 @@ inetutils
 inxi
 iwd
 jq
-kdenlive
 kvantum-qt5
 lazydocker
 lazygit
@@ -83,11 +93,9 @@ nss-mdns
 nvim
 obs-studio
 obsidian
-omarchy-chromium
-omarchy-nvim
-omarchy-walker
+nvim
+walker
 pamixer
-pinta
 playerctl
 plocate
 plymouth
@@ -103,7 +111,6 @@ ruby
 rust
 satty
 sddm
-signal-desktop
 slurp
 spotify
 starship
@@ -117,7 +124,6 @@ tobi-try
 ttf-cascadia-mono-nerd
 ttf-ia-writer
 ttf-jetbrains-mono-nerd
-typora
 tzupdate
 ufw
 ufw-docker
@@ -136,7 +142,7 @@ xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
 xdg-terminal-exec
 xmlstarlet
-xournalpp
 yaru-icon-theme
 yay
+zsh
 zoxide
