@@ -1,6 +1,6 @@
-# Mymarchy
+# Myarchy
 
-Mymarchy is a still opinionated fork of omarchy, by DHH.
+Myarchy is a still opinionated fork of omarchy, by DHH.
 
 Read more from the original on [omarchy.org](https://omarchy.org).
 
