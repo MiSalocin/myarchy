@@ -7,7 +7,7 @@ export TERMINAL=xdg-terminal-exec
 export EDITOR=nvim
 
 # Use a custom directory for screenshots (remember to make the directory!)
-# export MYMARCHY_SCREENSHOT_DIR="$HOME/Pictures/Screenshots"
+# export MYARCHY_SCREENSHOT_DIR="$HOME/Pictures/Screenshots"
 
 # Use a custom directory for screenrecordings (remember to make the directory!)
-# export MYMARCHY_SCREENRECORD_DIR="$HOME/Videos/Screencasts"
+# export MYARCHY_SCREENRECORD_DIR="$HOME/Videos/Screencasts"

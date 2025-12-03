@@ -9,7 +9,7 @@ if ! grep -q "map shift+insert paste_from_clipboard" "$KITTY_CONF"; then
 fi
 
 echo "Copy hooks examples"
-cp -r $MYMARCHY_PATH/config/myarchy/* $HOME/.config/myarchy/
+cp -r $MYARCHY_PATH/config/myarchy/* $HOME/.config/myarchy/
 
 echo "Add packages for updated myarchy-cmd-screenshot"
 myarchy-pkg-add grim slurp wayfreeze-git

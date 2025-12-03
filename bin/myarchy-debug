@@ -5,7 +5,7 @@ LOG_FILE="/tmp/myarchy-debug.log"
 cat > "$LOG_FILE" <<EOF
 Date: $(date)
 Hostname: $(hostname)
-Myarchy Branch: $(git -C "$MYMARCHY_PATH" branch --show-current 2>/dev/null || echo "unknown")
+Myarchy Branch: $(git -C "$MYARCHY_PATH" branch --show-current 2>/dev/null || echo "unknown")
 
 =========================================
 SYSTEM INFORMATION

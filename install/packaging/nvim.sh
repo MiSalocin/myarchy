@@ -1,2 +1,2 @@
 # Includes lazyvim and the themes
-myarchy-nvim-setup
+source $MYARCHY_PATH/bin/myarchy-nvim-setup.sh

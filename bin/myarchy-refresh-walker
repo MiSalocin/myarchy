@@ -2,7 +2,7 @@
 
 # Ensure walker is set to autostart
 mkdir -p ~/.config/autostart/
-cp $MYMARCHY_PATH/autostart/walker.desktop ~/.config/autostart/
+cp $MYARCHY_PATH/autostart/walker.desktop ~/.config/autostart/
 
 myarchy-refresh-config walker/config.toml
 myarchy-refresh-config elephant/calc.toml

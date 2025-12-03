@@ -8,7 +8,7 @@ else
 fi
 
 case "$branch" in
-  "master") git -C $MYMARCHY_PATH switch master ;;
-  "dev") git -C $MYMARCHY_PATH switch dev ;;
+  "master") git -C $MYARCHY_PATH switch master ;;
+  "dev") git -C $MYARCHY_PATH switch dev ;;
   *) echo "Unknown branch: $branch"; exit 1; ;;
 esac

@@ -85,7 +85,7 @@ EOF
 
 
   # Match Snapper configs if not installing from the ISO
-  if [[ -z ${MYMARCHY_CHROOT_INSTALL:-} ]]; then
+  if [[ -z ${MYARCHY_CHROOT_INSTALL:-} ]]; then
     if ! sudo snapper list-configs 2>/dev/null | grep -q "root"; then
       sudo snapper -c root create-config /
     fi

@@ -3,7 +3,7 @@
 set -e
 
 COMMAND="$1"
-MYMARCHY_PATH=${MYMARCHY_PATH:-$HOME/.local/share/myarchy}
+MYARCHY_PATH=${MYARCHY_PATH:-$HOME/.local/share/myarchy}
 
 if [[ -z $COMMAND ]]; then
   echo "Usage: myarchy-snapshot <create|restore>" >&2

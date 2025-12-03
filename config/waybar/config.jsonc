@@ -130,7 +130,7 @@
   },
   "custom/screenrecording-indicator": {
     "on-click": "myarchy-cmd-screenrecord",
-    "exec": "$MYMARCHY_PATH/default/waybar/indicators/screen-recording.sh",
+    "exec": "$MYARCHY_PATH/default/waybar/indicators/screen-recording.sh",
     "signal": 8,
     "return-type": "json"
   },

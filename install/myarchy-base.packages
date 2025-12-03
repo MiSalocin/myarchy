@@ -1,8 +1,6 @@
 # Myarchy core package list installed via install/packaging/base.sh
 # This file is also used by the ISO builder when determining needs
 
-aether
-asdcontrol
 avahi
 bash-completion
 bat
@@ -14,28 +12,11 @@ cups
 cups-browsed
 cups-filters
 cups-pdf
-docker
-docker-buildx
-docker-compose
 dust
-elephant
-elephant-bluetooth
-elephant-calc
-elephant-clipboard
-elephant-desktopapplications
-elephant-files
-elephant-menus
-elephant-providerlist
-elephant-runner
-elephant-symbols
-elephant-todo
-elephant-unicode
-elephant-websearch
 evince
 exfatprogs
 expac
 eza
-fastfetch
 fcitx5
 fcitx5-gtk
 fcitx5-qt
@@ -49,7 +30,6 @@ gnome-calculator
 gnome-keyring
 gnome-themes-extra
 grim
-gpu-screen-recorder
 gum
 gvfs-mtp
 gvfs-nfs
@@ -68,7 +48,6 @@ inxi
 iwd
 jq
 kvantum-qt5
-lazydocker
 lazygit
 less
 libsecret
@@ -76,7 +55,6 @@ libyaml
 libqalculate
 libreoffice-fresh
 llvm
-localsend
 luarocks
 mako
 man-db
@@ -94,7 +72,6 @@ nvim
 obs-studio
 obsidian
 nvim
-walker
 pamixer
 playerctl
 plocate
@@ -104,7 +81,6 @@ postgresql-libs
 power-profiles-daemon
 python-gobject
 python-poetry-core
-python-terminaltexteffects
 qt5-wayland
 ripgrep
 ruby
@@ -112,7 +88,6 @@ rust
 satty
 sddm
 slurp
-spotify
 starship
 sushi
 swaybg
@@ -120,18 +95,12 @@ swayosd
 system-config-printer
 tldr
 tree-sitter-cli
-tobi-try
 ttf-cascadia-mono-nerd
-ttf-ia-writer
 ttf-jetbrains-mono-nerd
-tzupdate
 ufw
-ufw-docker
 unzip
 usage
 uwsm
-waybar
-wayfreeze
 whois
 wireless-regdb
 wiremix
@@ -140,9 +109,6 @@ wl-clipboard
 woff2-font-awesome
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
-xdg-terminal-exec
 xmlstarlet
-yaru-icon-theme
-yay
 zsh
 zoxide

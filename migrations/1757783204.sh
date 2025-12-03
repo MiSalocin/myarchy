@@ -6,4 +6,4 @@ if [[ -f $mise_config ]]; then
   cp $mise_config "$mise_config.bak.$(date +%s)"
 fi
 
-source "$MYMARCHY_PATH/install/config/mise-work.sh"
+source "$MYARCHY_PATH/install/config/mise-work.sh"

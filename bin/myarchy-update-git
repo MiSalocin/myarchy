@@ -4,5 +4,5 @@ set -e
 
 echo -e "\e[32mUpdate Myarchy\e[0m"
 
-git -C $MYMARCHY_PATH pull --autostash
-git -C $MYMARCHY_PATH diff --check || git -C $MYMARCHY_PATH reset --merge
+git -C $MYARCHY_PATH pull --autostash
+git -C $MYARCHY_PATH diff --check || git -C $MYARCHY_PATH reset --merge

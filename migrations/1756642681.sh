@@ -1,3 +1,3 @@
 echo "Fix audio input on AMD Framework laptops"
 
-source $MYMARCHY_PATH/install/config/hardware/fix-f13-amd-audio-input.sh || true
+source $MYARCHY_PATH/install/config/hardware/fix-f13-amd-audio-input.sh || true

@@ -7,14 +7,14 @@ FIRST_RUN_MODE=~/.local/state/myarchy/first-run.mode
 if [[ -f "$FIRST_RUN_MODE" ]]; then
   rm -f "$FIRST_RUN_MODE"
 
-  bash "$MYMARCHY_PATH/install/first-run/battery-monitor.sh"
-  bash "$MYMARCHY_PATH/install/first-run/cleanup-reboot-sudoers.sh"
-  bash "$MYMARCHY_PATH/install/first-run/firewall.sh"
-  bash "$MYMARCHY_PATH/install/first-run/dns-resolver.sh"
-  bash "$MYMARCHY_PATH/install/first-run/gnome-theme.sh"
-  bash "$MYMARCHY_PATH/install/first-run/elephant.sh"
+  bash "$MYARCHY_PATH/install/first-run/battery-monitor.sh"
+  bash "$MYARCHY_PATH/install/first-run/cleanup-reboot-sudoers.sh"
+  bash "$MYARCHY_PATH/install/first-run/firewall.sh"
+  bash "$MYARCHY_PATH/install/first-run/dns-resolver.sh"
+  bash "$MYARCHY_PATH/install/first-run/gnome-theme.sh"
+  bash "$MYARCHY_PATH/install/first-run/elephant.sh"
   sudo rm -f /etc/sudoers.d/first-run
 
-  bash "$MYMARCHY_PATH/install/first-run/welcome.sh"
-  bash "$MYMARCHY_PATH/install/first-run/wifi.sh"
+  bash "$MYARCHY_PATH/install/first-run/welcome.sh"
+  bash "$MYARCHY_PATH/install/first-run/wifi.sh"
 fi

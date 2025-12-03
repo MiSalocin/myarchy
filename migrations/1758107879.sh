@@ -43,7 +43,7 @@ if $NEEDS_MIGRATION; then
 
   myarchy-pkg-add "${PACKAGES[@]}"
 
-  source $MYMARCHY_PATH/install/config/walker-elephant.sh
+  source $MYARCHY_PATH/install/config/walker-elephant.sh
 
   rm -rf ~/.config/walker/themes
 

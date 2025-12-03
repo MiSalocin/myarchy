@@ -29,7 +29,7 @@ fi
 
 # Copy custom desktop entries with proper X-TerminalArg* keys
 if command -v alacritty > /dev/null 2>&1; then
-  cp "$MYMARCHY_PATH/applications/Alacritty.desktop" ~/.local/share/applications/
+  cp "$MYARCHY_PATH/applications/Alacritty.desktop" ~/.local/share/applications/
 fi
 
 # Update hyprland bindings to use xdg-terminal-exec

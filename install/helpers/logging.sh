@@ -16,7 +16,7 @@ start_log_output() {
 
     while true; do
       # Read the last N lines into an array
-      mapfile -t current_lines < <(tail -n $log_lines "$MYMARCHY_INSTALL_LOG_FILE" 2>/dev/null)
+      mapfile -t current_lines < <(tail -n $log_lines "$MYARCHY_INSTALL_LOG_FILE" 2>/dev/null)
 
       # Build complete output buffer with escape sequences
       output=""
@@ -53,12 +53,12 @@ stop_log_output() {
 }
 
 start_install_log() {
-  sudo touch "$MYMARCHY_INSTALL_LOG_FILE"
-  sudo chmod 666 "$MYMARCHY_INSTALL_LOG_FILE"
+  sudo touch "$MYARCHY_INSTALL_LOG_FILE"
+  sudo chmod 666 "$MYARCHY_INSTALL_LOG_FILE"
 
-  export MYMARCHY_START_TIME=$(date '+%Y-%m-%d %H:%M:%S')
+  export MYARCHY_START_TIME=$(date '+%Y-%m-%d %H:%M:%S')
 
-  echo "=== Myarchy Installation Started: $MYMARCHY_START_TIME ===" >>"$MYMARCHY_INSTALL_LOG_FILE"
+  echo "=== Myarchy Installation Started: $MYARCHY_START_TIME ===" >>"$MYARCHY_INSTALL_LOG_FILE"
   start_log_output
 }
 
@@ -66,11 +66,11 @@ stop_install_log() {
   stop_log_output
   show_cursor
 
-  if [[ -n ${MYMARCHY_INSTALL_LOG_FILE:-} ]]; then
-    MYMARCHY_END_TIME=$(date '+%Y-%m-%d %H:%M:%S')
-    echo "=== Myarchy Installation Completed: $MYMARCHY_END_TIME ===" >>"$MYMARCHY_INSTALL_LOG_FILE"
-    echo "" >>"$MYMARCHY_INSTALL_LOG_FILE"
-    echo "=== Installation Time Summary ===" >>"$MYMARCHY_INSTALL_LOG_FILE"
+  if [[ -n ${MYARCHY_INSTALL_LOG_FILE:-} ]]; then
+    MYARCHY_END_TIME=$(date '+%Y-%m-%d %H:%M:%S')
+    echo "=== Myarchy Installation Completed: $MYARCHY_END_TIME ===" >>"$MYARCHY_INSTALL_LOG_FILE"
+    echo "" >>"$MYARCHY_INSTALL_LOG_FILE"
+    echo "=== Installation Time Summary ===" >>"$MYARCHY_INSTALL_LOG_FILE"
 
     if [ -f "/var/log/archinstall/install.log" ]; then
       ARCHINSTALL_START=$(grep -m1 '^\[' /var/log/archinstall/install.log 2>/dev/null | sed 's/^\[\([^]]*\)\].*/\1/' || true)
@@ -84,30 +84,30 @@ stop_install_log() {
         ARCH_MINS=$((ARCH_DURATION / 60))
         ARCH_SECS=$((ARCH_DURATION % 60))
 
-        echo "Archinstall: ${ARCH_MINS}m ${ARCH_SECS}s" >>"$MYMARCHY_INSTALL_LOG_FILE"
+        echo "Archinstall: ${ARCH_MINS}m ${ARCH_SECS}s" >>"$MYARCHY_INSTALL_LOG_FILE"
       fi
     fi
 
-    if [ -n "$MYMARCHY_START_TIME" ]; then
-      MYMARCHY_START_EPOCH=$(date -d "$MYMARCHY_START_TIME" +%s)
-      MYMARCHY_END_EPOCH=$(date -d "$MYMARCHY_END_TIME" +%s)
-      MYMARCHY_DURATION=$((MYMARCHY_END_EPOCH - MYMARCHY_START_EPOCH))
+    if [ -n "$MYARCHY_START_TIME" ]; then
+      MYARCHY_START_EPOCH=$(date -d "$MYARCHY_START_TIME" +%s)
+      MYARCHY_END_EPOCH=$(date -d "$MYARCHY_END_TIME" +%s)
+      MYARCHY_DURATION=$((MYARCHY_END_EPOCH - MYARCHY_START_EPOCH))
 
-      MYMARCHY_MINS=$((MYMARCHY_DURATION / 60))
-      MYMARCHY_SECS=$((MYMARCHY_DURATION % 60))
+      MYARCHY_MINS=$((MYARCHY_DURATION / 60))
+      MYARCHY_SECS=$((MYARCHY_DURATION % 60))
 
-      echo "Myarchy:     ${MYMARCHY_MINS}m ${MYMARCHY_SECS}s" >>"$MYMARCHY_INSTALL_LOG_FILE"
+      echo "Myarchy:     ${MYARCHY_MINS}m ${MYARCHY_SECS}s" >>"$MYARCHY_INSTALL_LOG_FILE"
 
       if [ -n "$ARCH_DURATION" ]; then
-        TOTAL_DURATION=$((ARCH_DURATION + MYMARCHY_DURATION))
+        TOTAL_DURATION=$((ARCH_DURATION + MYARCHY_DURATION))
         TOTAL_MINS=$((TOTAL_DURATION / 60))
         TOTAL_SECS=$((TOTAL_DURATION % 60))
-        echo "Total:       ${TOTAL_MINS}m ${TOTAL_SECS}s" >>"$MYMARCHY_INSTALL_LOG_FILE"
+        echo "Total:       ${TOTAL_MINS}m ${TOTAL_SECS}s" >>"$MYARCHY_INSTALL_LOG_FILE"
       fi
     fi
-    echo "=================================" >>"$MYMARCHY_INSTALL_LOG_FILE"
+    echo "=================================" >>"$MYARCHY_INSTALL_LOG_FILE"
 
-    echo "Rebooting system..." >>"$MYMARCHY_INSTALL_LOG_FILE"
+    echo "Rebooting system..." >>"$MYARCHY_INSTALL_LOG_FILE"
   fi
 }
 
@@ -116,18 +116,18 @@ run_logged() {
 
   export CURRENT_SCRIPT="$script"
 
-  echo "[$(date '+%Y-%m-%d %H:%M:%S')] Starting: $script" >>"$MYMARCHY_INSTALL_LOG_FILE"
+  echo "[$(date '+%Y-%m-%d %H:%M:%S')] Starting: $script" >>"$MYARCHY_INSTALL_LOG_FILE"
 
   # Use bash -c to create a clean subshell
-  bash -c "source '$script'" </dev/null >>"$MYMARCHY_INSTALL_LOG_FILE" 2>&1
+  bash -c "source '$script'" </dev/null >>"$MYARCHY_INSTALL_LOG_FILE" 2>&1
 
   local exit_code=$?
 
   if [ $exit_code -eq 0 ]; then
-    echo "[$(date '+%Y-%m-%d %H:%M:%S')] Completed: $script" >>"$MYMARCHY_INSTALL_LOG_FILE"
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] Completed: $script" >>"$MYARCHY_INSTALL_LOG_FILE"
     unset CURRENT_SCRIPT
   else
-    echo "[$(date '+%Y-%m-%d %H:%M:%S')] Failed: $script (exit code: $exit_code)" >>"$MYMARCHY_INSTALL_LOG_FILE"
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] Failed: $script (exit code: $exit_code)" >>"$MYARCHY_INSTALL_LOG_FILE"
   fi
 
   return $exit_code

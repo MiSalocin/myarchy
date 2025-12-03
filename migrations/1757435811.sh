@@ -1,3 +1,3 @@
 echo "Copy Myarchy default app icons to .local/share/icons"
 
-source $MYMARCHY_PATH/install/packaging/icons.sh
+source $MYARCHY_PATH/install/packaging/icons.sh
