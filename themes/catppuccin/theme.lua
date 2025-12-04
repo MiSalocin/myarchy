@@ -1,0 +1,1 @@
+/home/nick/.config/nvim/lua/plugins/theme.lua
