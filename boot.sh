@@ -3,7 +3,7 @@
 # Set install mode to online since boot.sh is used for curl installations
 export MYARCHY_ONLINE_INSTALL=true
 
-ansi_art='
+ansi_art='      ▄▄
  ▄███████████▄   ▄█   █▄    ▄███████   ▄███████   ▄███████   ▄█   █▄    ▄█   █▄
 ███   ███   ███ ███   ███  ███   ███  ███   ███  ███   ███  ███   ███  ███   ███
 ███   ███   ███ ███   ███  ███   ███  ███   ███  ███   █▀   ███   ███  ███   ███

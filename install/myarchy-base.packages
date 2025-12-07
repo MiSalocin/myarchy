@@ -53,6 +53,7 @@ libyaml
 libqalculate
 libreoffice-fresh
 llvm
+localsend
 luarocks
 mako
 man-db
@@ -97,6 +98,7 @@ ufw
 unzip
 usage
 uwsm
+waybar
 whois
 wireless-regdb
 wiremix

@@ -20,12 +20,18 @@ setopt HIST_IGNORE_ALL_DUPS
 
 # oh-my-zsh
 ZSH_THEME=""
-plugins=(git)
+plugins=(
+  git
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+  sudo
+  extract
+  command-not-found
+  colored-man-pages
+  history-substring-search
+)
 source "$HOME/.local/share/oh-my-zsh/oh-my-zsh.sh"
 
 # Source custom configurations
 source "$HOME/.local/share/myarchy/default/zshrc"
-
-# Starship prompt
-eval "\$(starship init zsh)"
 EOF
